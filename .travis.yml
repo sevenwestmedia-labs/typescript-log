@@ -1,6 +1,7 @@
 language: node_js
 node_js:
     - lts/*
+script: yarn verify
 deploy:
     provider: npm
     email: oss@sevenwestmedia.onmicrosoft.com
