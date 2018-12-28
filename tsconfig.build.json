@@ -1,0 +1,7 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false /* Do not emit outputs. */
+    },
+    "include": ["src/index.ts"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "typescript-log",
+  "version": "1.0.0",
+  "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "jest"
+  },
+  "keywords": [
+    "typescript",
+    "Logger",
+    "pino",
+    "bunyan",
+    "type"
+  ],
+  "author": "Jake Ginnivan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.2.2"
+  }
+}
