@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+    - lts/*
+script: yarn verify
+deploy:
+    provider: npm
+    email: oss@sevenwestmedia.onmicrosoft.com
+    api_key:
+        secure: nwzo20GFD0TAEAQB+oPyOVF1LV7tx84GDGP9Omg9uNcRz9gZBmfvdAPWZr7LpQq0bTq8Tjx0mfhRkjHaFHoqdrkKsmJqtlqynBTQRErCsSzbzPxYAB3/9FeGFBJJpFbi+qjRs0v4iZEPDtYHxTvo2vfL+z+EvCZqB6Y4cGawhaowxHz1gnzxuZjJaI8OsFiiqvqyMA/XDLSxiopCcUcR9yOUC+xgQ9xMgtSzfei2iKGhNxnqCphNTpc6PqwjpbcY/WdIUW53LJK03dlEef6qeHaMRpwjHrILTtwK6gX4hmNCVs6Hr1dqCsHTR0ie6XGx3dPsVq+f5CYxFCxD5p5XO+4coI+NoM0NjNQlNZ0fRSJ6sGflaCE4cFqO0PkRPdCijt7V+FuIBE1s6dSw8yZHgJvU7BYeJK6kYLvCn9+P5f9BVbe+S9DvOMC/yYQ2yKCDGUT6RIaa4E8fpM3we6/8MS2qQpoxnIon7w0xkeox6xnDZ4wRl9MOBh55NgXkgMTKq46wj5IQwCVcJOTIsm9g0bJaQfCuppZpstrO1atZPV1JrzBVrb7BwuEEDc5Q4UOiniMlnugt+OvuDqX4HLCBIp7laW2s9dVDo9QPshZGxv0y7cLkGVfWITcei+lVAX+pB/+xiVigQz8+hNu8zxr64poCcFJiwOIsYM48+vmIpr8=
+    on:
+        tags: true
+        repo: sevenwestmedia-labs/typescript-log
