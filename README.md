@@ -1,6 +1,6 @@
 # TypeScript abstract logger
 
-[![Build Status](https://travis-ci.com/sevenwestmedia-labs/typescript-log.svg?branch=master)](https://travis-ci.com/sevenwestmedia-labs/typescript-log)
+[![Build Status](https://travis-ci.com/sevenwestmedia-labs/typescript-log.svg?branch=master)](https://travis-ci.com/sevenwestmedia-labs/typescript-log) [![Greenkeeper badge](https://badges.greenkeeper.io/sevenwestmedia-labs/typescript-log.svg)](https://greenkeeper.io/)
 ![](https://img.shields.io/npm/v/typescript-log.svg)
 
 Useful for libraries which want to enable the consuming application to provide a logger. Our projects ended up duplicating the same logging interface and consoleLogger and noopLogger's.
