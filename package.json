@@ -1,33 +1,35 @@
 {
-    "name": "typescript-log",
-    "version": "1.0.0",
-    "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "repository": "github:sevenwestmedia-labs/typescript-log",
-    "scripts": {
-        "prepack": "yarn verify && yarn build",
-        "build": "tsc -p tsconfig.build.json",
-        "lint": "yarn tslint --project tsconfig.build.json",
-        "test": "jest",
-        "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint"
-    },
-    "keywords": [
-        "typescript",
-        "Logger",
-        "pino",
-        "bunyan",
-        "types"
-    ],
-    "author": "Jake Ginnivan",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/jest": "^23.3.10",
-        "jest": "^23.6.0",
-        "ts-jest": "^23.10.5",
-        "tslint": "^5.12.0",
-        "tslint-config-prettier": "^1.17.0",
-        "tslint-eslint-rules": "^5.4.0",
-        "typescript": "^3.2.2"
-    }
+  "name": "typescript-log",
+  "version": "0.1.0",
+  "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "github:sevenwestmedia-labs/typescript-log",
+  "scripts": {
+    "prepack": "yarn verify && yarn build",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "yarn tslint --project tsconfig.build.json",
+    "test": "jest",
+    "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "typescript",
+    "Logger",
+    "pino",
+    "bunyan",
+    "types"
+  ],
+  "author": "Jake Ginnivan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.0",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.2.2",
+    "semantic-release": "^15.13.2"
+  }
 }
