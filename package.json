@@ -1,43 +1,51 @@
 {
-  "name": "typescript-log",
-  "version": "0.1.0",
-  "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": "github:sevenwestmedia-labs/typescript-log",
-  "scripts": {
-    "prepack": "yarn verify && yarn build",
-    "build": "tsc -p tsconfig.build.json",
-    "lint": "yarn tslint --project tsconfig.build.json",
-    "test": "jest",
-    "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint",
-    "semantic-release": "semantic-release",
-    "cz": "git-cz"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "typescript-log",
+    "version": "0.0.0-development",
+    "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "es2015": "dist/es2015/index.js",
+    "repository": "github:sevenwestmedia-labs/typescript-log",
+    "scripts": {
+        "prepack": "yarn verify && yarn build",
+        "build": "yarn build:es2015 && yarn build:esm && yarn build:cjs",
+        "build:es2015": "tsc --module es2015 --target es2015 --lib dom,es2015 --outDir dist/es2015 -p tsconfig.build.json",
+        "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm -p tsconfig.build.json",
+        "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs -p tsconfig.build.json",
+        "lint": "yarn tslint --project tsconfig.build.json",
+        "test": "jest",
+        "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint",
+        "semantic-release": "semantic-release",
+        "cz": "git-cz"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "keywords": [
+        "typescript",
+        "Logger",
+        "pino",
+        "bunyan",
+        "types"
+    ],
+    "author": "Jake Ginnivan",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^23.3.10",
+        "commitizen": "^3.0.5",
+        "cz-conventional-changelog": "^2.1.0",
+        "jest": "^23.6.0",
+        "semantic-release": "^15.13.2",
+        "ts-jest": "^23.10.5",
+        "tslib": "^1.9.3",
+        "tslint": "^5.12.0",
+        "tslint-config-prettier": "^1.17.0",
+        "tslint-eslint-rules": "^5.4.0",
+        "typescript": "^3.2.2"
+    },
+    "peerDependencies": {
+        "tslib": "^1.9.3"
     }
-  },
-  "keywords": [
-    "typescript",
-    "Logger",
-    "pino",
-    "bunyan",
-    "types"
-  ],
-  "author": "Jake Ginnivan",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^23.3.10",
-    "commitizen": "^3.0.5",
-    "cz-conventional-changelog": "^2.1.0",
-    "jest": "^23.6.0",
-    "semantic-release": "^15.13.2",
-    "ts-jest": "^23.10.5",
-    "tslint": "^5.12.0",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.2.2"
-  }
 }
