@@ -56,38 +56,38 @@ export function consoleLogger(
         trace: (...rest: any[]) => {
             levelNumber[level] <= 0 &&
                 (context
-                    ? console.log('TRACE', ...rest)
-                    : console.log('TRACE', context, ...rest))
+                    ? console.log('TRACE', context, ...rest)
+                    : console.log('TRACE', ...rest))
         },
         debug: (...rest: any[]) => {
             levelNumber[level] <= 1 &&
                 (context
-                    ? console.log('DEBUG', ...rest)
-                    : console.log('DEBUG', context, ...rest))
+                    ? console.log('DEBUG', context, ...rest)
+                    : console.log('DEBUG', ...rest))
         },
         info: (...rest: any[]) => {
             levelNumber[level] <= 2 &&
                 (context
-                    ? console.log(' INFO', ...rest)
-                    : console.log(' INFO', context, ...rest))
+                    ? console.log(' INFO', context, ...rest)
+                    : console.log(' INFO', ...rest))
         },
         warn: (...rest: any[]) => {
             levelNumber[level] <= 3 &&
                 (context
-                    ? console.log(' WARN', ...rest)
-                    : console.log(' WARN', context, ...rest))
+                    ? console.log(' WARN', context, ...rest)
+                    : console.log(' WARN', ...rest))
         },
         error: (...rest: any[]) => {
             levelNumber[level] <= 4 &&
                 (context
-                    ? console.log('ERROR', ...rest)
-                    : console.log('ERROR', context, ...rest))
+                    ? console.log('ERROR', context, ...rest)
+                    : console.log('ERROR', ...rest))
         },
         fatal: (...rest: any[]) => {
             levelNumber[level] <= 5 &&
                 (context
-                    ? console.log('FATAL', ...rest)
-                    : console.log('FATAL', context, ...rest))
+                    ? console.log('FATAL', context, ...rest)
+                    : console.log('FATAL', ...rest))
         },
         child: (childObj: LogObject) =>
             consoleLogger(
