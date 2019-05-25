@@ -33,7 +33,7 @@
     "author": "Jake Ginnivan",
     "license": "MIT",
     "devDependencies": {
-        "@types/jest": "^24.0.0",
+        "@types/jest": "^24.0.13",
         "commitizen": "^3.0.5",
         "cz-conventional-changelog": "^2.1.0",
         "jest": "^23.6.0",
