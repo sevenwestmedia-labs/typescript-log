@@ -5,6 +5,7 @@
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "es2015": "dist/es2015/index.js",
+    "sideEffects": false,
     "repository": "github:sevenwestmedia-labs/typescript-log",
     "scripts": {
         "prepack": "yarn verify && yarn build",
