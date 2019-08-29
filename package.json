@@ -4,25 +4,16 @@
     "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
-    "es2015": "dist/es2015/index.js",
     "sideEffects": false,
     "repository": "github:sevenwestmedia-labs/typescript-log",
     "scripts": {
         "prepack": "yarn verify && yarn build",
-        "build": "yarn build:es2015 && yarn build:esm && yarn build:cjs",
-        "build:es2015": "tsc --module es2015 --target es2015 --lib dom,es2015 --outDir dist/es2015 -p tsconfig.build.json",
+        "build": "yarn build:esm && yarn build:cjs",
         "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm -p tsconfig.build.json",
         "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs -p tsconfig.build.json",
-        "lint": "yarn tslint --project tsconfig.build.json",
+        "lint": "eslint --ext .js,.ts .",
         "test": "jest",
-        "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint",
-        "semantic-release": "semantic-release",
-        "cz": "git-cz"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+        "verify": "yarn tsc -p tsconfig.json && yarn test && yarn lint"
     },
     "keywords": [
         "typescript",
@@ -34,17 +25,16 @@
     "author": "Jake Ginnivan",
     "license": "MIT",
     "devDependencies": {
-        "@types/jest": "^24.0.16",
-        "commitizen": "^4.0.3",
-        "cz-conventional-changelog": "^3.0.2",
-        "jest": "^24.8.0",
-        "semantic-release": "^15.13.19",
+        "@types/jest": "^24.0.18",
+        "@typescript-eslint/eslint-plugin": "^2.0.0",
+        "@typescript-eslint/parser": "^2.0.0",
+        "eslint": "^6.2.2",
+        "eslint-config-prettier": "^6.1.0",
+        "eslint-config-wanews-base": "^2.0.1",
+        "jest": "^24.9.0",
         "ts-jest": "^24.0.2",
         "tslib": "^1.10.0",
-        "tslint": "^5.18.0",
-        "tslint-config-prettier": "^1.18.0",
-        "tslint-eslint-rules": "^5.4.0",
-        "typescript": "^3.5.3"
+        "typescript": "^3.6.2"
     },
     "peerDependencies": {
         "tslib": "^1.10.0"
