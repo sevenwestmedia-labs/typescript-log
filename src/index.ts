@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 export type Levels = 'fatal' | 'error' | 'warn' | 'info' | 'debug' | 'trace'
 
 export interface LogObject {
@@ -25,9 +26,9 @@ export interface Logger {
     child(childObj: LogObject): Logger
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function noopLogger() {
     return {
-        // tslint:disable:no-empty
         trace: () => {},
         debug: () => {},
         info: () => {},
