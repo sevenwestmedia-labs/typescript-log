@@ -1,6 +1,6 @@
 {
     "name": "typescript-log",
-    "version": "1.1.1",
+    "version": "2.0.0",
     "description": "Logger interface with a few simple implementations, interface compatible with pino, bunyan and probably others",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
