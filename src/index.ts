@@ -2,7 +2,7 @@
 export type Levels = 'fatal' | 'error' | 'warn' | 'info' | 'debug' | 'trace'
 
 export interface LogObject {
-    [key: string]: any
+    [key: string]: unknown
 }
 
 export interface ErrorObject extends LogObject {
@@ -54,37 +54,37 @@ export function consoleLogger(
     // tslint:disable:no-console
     // tslint:disable:no-unused-expression
     return {
-        trace: (...rest: any[]) => {
+        trace: (...rest: unknown[]) => {
             levelNumber[level] <= 0 &&
                 (context
                     ? console.log('TRACE', context, ...rest)
                     : console.log('TRACE', ...rest))
         },
-        debug: (...rest: any[]) => {
+        debug: (...rest: unknown[]) => {
             levelNumber[level] <= 1 &&
                 (context
                     ? console.log('DEBUG', context, ...rest)
                     : console.log('DEBUG', ...rest))
         },
-        info: (...rest: any[]) => {
+        info: (...rest: unknown[]) => {
             levelNumber[level] <= 2 &&
                 (context
                     ? console.log(' INFO', context, ...rest)
                     : console.log(' INFO', ...rest))
         },
-        warn: (...rest: any[]) => {
+        warn: (...rest: unknown[]) => {
             levelNumber[level] <= 3 &&
                 (context
                     ? console.log(' WARN', context, ...rest)
                     : console.log(' WARN', ...rest))
         },
-        error: (...rest: any[]) => {
+        error: (...rest: unknown[]) => {
             levelNumber[level] <= 4 &&
                 (context
                     ? console.log('ERROR', context, ...rest)
                     : console.log('ERROR', ...rest))
         },
-        fatal: (...rest: any[]) => {
+        fatal: (...rest: unknown[]) => {
             levelNumber[level] <= 5 &&
                 (context
                     ? console.log('FATAL', context, ...rest)
